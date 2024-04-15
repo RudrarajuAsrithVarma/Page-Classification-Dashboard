@@ -1,3 +1,5 @@
+PAGE CLASSIFICATION DASHBOARD
+
 • This a user-friendly UI Dashboard utilizing Angular framework to provide users with comprehensive insights into metrics,
 performance benchmarks, and real-time monitoring of a page classification model.
 
