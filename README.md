@@ -8,7 +8,7 @@ make the dashboard more user-friendly and efficient.
 
 • Made sure that the dashboard's visual front-end works perfectly with the technical back-end powered by Flask.
 
-                                    VISUALS OF HOW THE ENTIRE DASHBOARD LOOKS
+                                          VISUALS OF HOW THE ENTIRE DASHBOARD LOOKS
 
 1) OVERALL VIEW OF THE DASHBOARD
 
@@ -38,7 +38,9 @@ make the dashboard more user-friendly and efficient.
 
 7) VIDEO OF THE POPUP FUNCTIONALITY AND LOOK OF THE OVERALL PAGE
 
-https://github.com/RudrarajuAsrithVarma/Page-Classification-Dashboard/assets/98108770/075a2b78-b315-4bf1-a347-13132a16706e
+https://github.com/RudrarajuAsrithVarma/Page-Classification-Dashboard/assets/98108770/3d293603-f737-463b-8821-6c4683a25b8d
+
+
 
 
 
