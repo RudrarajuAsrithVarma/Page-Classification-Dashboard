@@ -8,7 +8,7 @@ make the dashboard more user-friendly and efficient.
 
 • Made sure that the dashboard's visual front-end works perfectly with the technical back-end powered by Flask.
 
-THE DETAILS REGARDING THE EXECUTION OF THE PROJECT CODE ARE STATED INSIDE "PREREQUISITES.TXT" FILE IN THE "DASHBOARD ANGULAR" FOLDER.
+### THE DETAILS REGARDING THE EXECUTION OF THE PROJECT CODE ARE STATED INSIDE "PREREQUISITES.TXT" FILE IN THE "DASHBOARD ANGULAR" FOLDER.
 
 #                                         VISUALS OF HOW THE ENTIRE DASHBOARD LOOKS
 
