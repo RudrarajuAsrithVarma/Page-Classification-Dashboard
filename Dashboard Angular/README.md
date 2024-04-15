@@ -5,9 +5,13 @@ Extract it to a specific directory.
 
 ## Versions:
 1)Angular CLI Version: 16.1.4
+
 2)Node Version: 18.16.1
+
 3)Package Manager: npm 9.5.1
+
 4)OS: win32 x64
+
 5)typescript Version: 5.1.6
 
 ## PREREQUISITES:
