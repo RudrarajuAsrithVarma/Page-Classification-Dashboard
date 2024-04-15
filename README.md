@@ -40,6 +40,8 @@ make the dashboard more user-friendly and efficient.
 
 https://github.com/RudrarajuAsrithVarma/Page-Classification-Dashboard/assets/98108770/3d293603-f737-463b-8821-6c4683a25b8d
 
+THE DETAILS REGARDING THE EXECUTION OF THE PROJECT CODE ARE STATED INSIDE "PREREQUISITES.TXT" FILE IN THE "DASHBOARD ANGULAR" FOLDER.
+
 
 
 
