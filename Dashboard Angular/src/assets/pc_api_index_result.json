@@ -1,0 +1,83 @@
+[
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-31T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-01T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-02T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-03T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-04T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-05T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-06T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    },
+    {
+      "RECORD_ID": "1102",
+      "PDF_FILE_NAME": "SC6E\\465-003\\COMPLETED\\465-003_31MAR03_R017.PDF",
+      "PAGE_COUNT": 5,
+      "INPUT_DATE": null,
+      "ANALYST_ALIAS_FILE_NAME": null,
+      "SCANNED_DATE": "2003-03-07T13:44:29",
+      "COMPLETED_DATE": "2003-03-31T16:31:18",
+      "pc_main_doc_id": "1"
+    }
+  ]
+  

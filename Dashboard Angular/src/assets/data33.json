@@ -1,0 +1,57 @@
+{
+  "TOTAL_RECORDS": 11155,
+  "PAGE_CONTENT": [
+    {
+      "RECORD_ID": "1821536",
+      "PDF_FILE_NAME": "C55S\\S550-0066\\COMPLETED\\0001C360.PDF",
+      "SCANNED_DATE": "7821-03-01",
+      "COMPLETED_DATE": "7821-03-01",
+      "PAGE_COUNT": 1,
+      "STATUS": "D",
+      "NOTE": " ",
+      "PROC_STAT": "2023-06-29",
+      "PROC_END": null,
+      "PREDICTED_PAGES": 0,
+      "RN": 1
+    },
+    {
+      "RECORD_ID": "23946459",
+      "PDF_FILE_NAME": "CJLT\\680A-0306\\INPUT\\8187024_1.PDF",
+      "SCANNED_DATE": "2023-07-25",
+      "COMPLETED_DATE": null,
+      "PAGE_COUNT": 1,
+      "STATUS": "Q",
+      "NOTE": null,
+      "PROC_STAT": null,
+      "PROC_END": null,
+      "PREDICTED_PAGES": 0,
+      "RN": 2
+    },
+    {
+      "RECORD_ID": "23946458",
+      "PDF_FILE_NAME": "CJLT\\680A-0306\\INPUT\\8187000_1.PDF",
+      "SCANNED_DATE": "2023-07-25",
+      "COMPLETED_DATE": null,
+      "PAGE_COUNT": 1,
+      "STATUS": "Q",
+      "NOTE": null,
+      "PROC_STAT": null,
+      "PROC_END": null,
+      "PREDICTED_PAGES": 0,
+      "RN": 3
+    },
+    {
+      "RECORD_ID": "23946457",
+      "PDF_FILE_NAME": "BC71\\FM-76\\INPUT\\8187026_1.PDF",
+      "SCANNED_DATE": "2023-07-24",
+      "COMPLETED_DATE": null,
+      "PAGE_COUNT": 1,
+      "STATUS": "Q",
+      "NOTE": null,
+      "PROC_STAT": null,
+      "PROC_END": null,
+      "PREDICTED_PAGES": 0,
+      "RN": 4
+    }
+  ]
+}

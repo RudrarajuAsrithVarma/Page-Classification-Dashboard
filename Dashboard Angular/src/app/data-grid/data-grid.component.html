@@ -1,0 +1,138 @@
+<div class="container" >
+    <div class="header">
+      <h6 class="pagetitle">Page Classification - Dashboard</h6>
+    </div>
+    <div></div>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchRecordText" name="searchRecordText" (keyup.enter)="search()" placeholder="RECORD ID" />
+      <input type="text" [(ngModel)]="searchFileNameText" (keyup.enter)="search()" placeholder="FILE NAME" />
+      <input type="date" [(ngModel)]="startDate" (keyup.enter)="search()" placeholder="Search by Start Date" pattern="\d{4}-\d{2}-\d{2}" />
+      <input type="date" [(ngModel)]="endDate" (keyup.enter)="search()" placeholder="Search by End Date" pattern="\d{4}-\d{2}-\d{2}" format="dd-MMM-yyyy" />
+      <input type="checkbox" id="sendGcCheckbox" [(ngModel)]="sendGc" (keyup.enter)="search()"  />
+      <label for="sendGcCheckbox" class="labelcheckbox" >Only Conflicts</label>
+      <button class="custom-button" (click)="search()">Search</button>
+    </div>
+    <ng-container *ngIf="isLoading; else dataGridWithLoader">
+      <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div>
+      <!-- Blur the datagrid -->
+      <dx-data-grid
+        id="gridContainer"
+        [dataSource]="dataSource | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }"
+        [showBorders]="true"
+        [columns]="gridColumns"
+        [editing]="{ mode: 'cell', allowUpdating: false }"
+        [allowColumnResizing]="true"
+        [rowAlternationEnabled]="true"
+        [allowColumnReordering]="true"
+        columnResizingMode="widget"
+        class="grid-cell-underlined blur-effect"
+        columnRenderingMode="virtual"
+      >
+        <!-- Custom Cell Template  (click)="onRecordIdClick(cellData.row.data)"-->
+        <div *dxTemplate="let cellData of 'recordidTemplate'">
+  <a [style.textDecoration]="'underline'" [style.color]="'#337ab7'" [style.cursor]="'pointer'"
+    [title]="onHoverPcMainDoc(cellData)"
+    (click)="openRecordPopup(cellData.row.data)"
+  >
+    {{ cellData.value }}
+  </a>
+</div>
+        
+  
+        <div *dxTemplate="let cellData of 'customCellTemplatePdfFile'">
+          <a [href]="getURLForPCMainDocID(cellData.value)" target="_blank" [style.textDecoration]="'underline'"
+            [ngClass]="{ 'abandoned-pdf-file': isSubDocAbandoned(cellData) }" [title]="onHoverAbondoned(cellData)">
+            {{ cellData.value }}
+          </a>
+        </div>
+  
+        <ng-container *dxTemplate="let cellData of 'pagespredictedTemplate'">
+          
+          <span style="display: inline-block;"><span [ngStyle]="{ 'color': isLessThan(cellData) ? 'red' : 'black' }">{{ cellData.row.data.PREDICTED_PAGES }}</span>/{{ cellData.row.data.PAGE_COUNT }}</span>
+          <span *ngIf="cellData.row.data.CONFLICT_PAGES > 0" style="color: red;"> 
+            <span>&nbsp;- </span>
+            <span>&nbsp; ( </span>
+            <a [style.textDecoration]="'underline'" target="_blank" (click)="onConflictNumberClick(cellData.row.data)"  class="clickable-cell">{{ cellData.row.data.CONFLICT_PAGES }}</a>
+            <span> ) </span>
+          </span>
+        </ng-container>
+  
+        <div *dxTemplate="let data of 'header' let container = container">
+          <b>{{ data.caption }}</b>
+        </div>
+  
+        <div *dxTemplate="let column of gridColumns">
+          <b>{{ column.dataField | uppercase }}</b>
+        </div>
+      </dx-data-grid>
+    </ng-container>
+  
+    <ng-template #dataGridWithLoader>
+      <!-- Display the datagrid normally -->
+      <dx-data-grid
+        id="gridContainer"
+        [dataSource]="dataSource | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }"
+        [showBorders]="true"
+        [columns]="gridColumns"
+        [editing]="{ mode: 'cell', allowUpdating: false }"
+        [allowColumnResizing]="true"
+        [rowAlternationEnabled]="true"
+        [allowColumnReordering]="true"
+        columnResizingMode="widget"
+        class="grid-cell-underlined"
+        columnRenderingMode="virtual"
+      >
+        <!-- Custom Cell Template  (click)="onRecordIdClick(cellData.row.data)"-->
+        <div *dxTemplate="let cellData of 'recordidTemplate'">
+          <a [style.textDecoration]="'underline'" [style.color]="'#337ab7'" [style.cursor]="'pointer'"
+            [title]="onHoverPcMainDoc(cellData)"
+            (click)="openRecordPopup(cellData.row.data)"
+          >
+            {{ cellData.value }}
+          </a>
+        </div>
+        
+  
+        <div *dxTemplate="let cellData of 'customCellTemplatePdfFile'">
+          <a [href]="getURLForPCMainDocID(cellData)" target="_blank" [style.textDecoration]="'underline'"
+            [ngClass]="{ 'abandoned-pdf-file': isSubDocAbandoned(cellData) }" [title]="onHoverAbondoned(cellData)">
+            {{ cellData.value }}
+          </a>
+        </div>
+  
+        <ng-container *dxTemplate="let cellData of 'pagespredictedTemplate'">
+          
+          <span style="display: inline-block;"><span [ngStyle]="{ 'color': isLessThan(cellData) ? 'red' : 'black' }">{{ cellData.row.data.PREDICTED_PAGES }}</span>/{{ cellData.row.data.PAGE_COUNT }}</span>
+          <span *ngIf="cellData.row.data.CONFLICT_PAGES > 0" style="color: red;"> 
+            <span>&nbsp;- </span>
+            <span>&nbsp; ( </span>
+            <a [style.textDecoration]="'underline'" target="_blank" (click)="onConflictNumberClick(cellData.row.data)"  class="clickable-cell">{{ cellData.row.data.CONFLICT_PAGES }}</a>
+            <span> ) </span>
+          </span>
+        </ng-container>
+  
+        <div *dxTemplate="let data of 'header' let container = container">
+          <b>{{ data.caption }}</b>
+        </div>
+  
+        <div *dxTemplate="let column of gridColumns">
+          <b>{{ column.dataField | uppercase }}</b>
+        </div>
+      </dx-data-grid>
+    </ng-template>
+  
+    <!-- Pagination Controls -->
+    <div class="pagination-controls">
+      <pagination-controls (pageChange)="onPageChange($event)" name="currentPage"></pagination-controls>
+  
+      <div class="pagination-search">
+        <span>Go to page:</span>
+        <input type="number" [(ngModel)]="goToPageNumber" (keyup.enter)="goToPage()" min="0" max="{{ totalPages }}" placeholder="" />
+        <button class="custom-button" (click)="goToPage()">Go</button>
+      </div>
+    </div>
+  </div>
+
+  

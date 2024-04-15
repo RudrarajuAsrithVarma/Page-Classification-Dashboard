@@ -1,0 +1,217 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  .pagetitle{
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+  }
+  .header {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px 0;
+    background-color: hsl(180, 19%, 69%);
+    color: #fff;
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .search-container input[type="text"],
+  .search-container input[type="date"]{
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px; 
+    margin-right: 5px; 
+    vertical-align: middle; 
+  }
+  
+  .search-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #2199e8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .labelcheckbox{
+    margin-left: -10px;
+  }
+  
+  #gridContainer {
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .dx-datagrid .dx-header-row .dx-header-cell {
+    background-color: yellow;
+  }
+  .pagination-controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -15px;
+  }
+  
+  .dx-datagrid {
+    margin-top: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
+  }
+  
+  .grid-cell-underlined {
+    font-size: 12px;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .header,
+  .search-container,
+  .pagination-controls {
+    margin: 5px 0;
+  }
+  
+  ::ng-deep .dx-datagrid-headers .dx-datagrid-text-content {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+  }
+  ::ng-deep .dx-datagrid-headers .dx-header-row {
+    background-color:#beb9b9;
+  }
+  
+  .abandoned-pdf-file {
+    color: red;
+  }
+  
+  .abandoned-less{
+    color: red;
+  }
+  
+  span{
+    display: inline-block;
+  }
+  
+  .loading-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .dx-header-row {
+    background: rgba(111, 127, 138, 1);
+    color: red !important;
+  }
+  
+  .loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    z-index: 1;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .grid-cell-underlined.blur-effect {
+    filter: blur(0.5px);
+    pointer-events: none;
+  }
+  
+  .grid-container {
+    height: calc(100vh - 100px);
+    overflow: auto;
+  }
+  
+  /* app.component.css */
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .clickable-cell {
+    cursor: pointer;
+    text-decoration: underline;
+    color:red;
+  }
+  
+  .clickable-cell:hover {
+    cursor: pointer;
+    color: red;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+          margin: 0;
+  }
+  
+  
+  

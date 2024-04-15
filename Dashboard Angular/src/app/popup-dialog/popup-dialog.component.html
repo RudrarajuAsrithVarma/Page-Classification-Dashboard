@@ -1,0 +1,48 @@
+<div class="container" >
+    <div class="header">
+      <h6 class="pagetitle">Detailed View</h6>
+    </div>
+    
+    <ng-container *ngIf="isGridLoading; else dataGridWithLoader">
+      <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div>
+      <!-- Blur the datagrid | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }-->
+      <dx-data-grid
+        id="gridContainer"
+        [dataSource]="dataSource "
+        [showBorders]="true"
+        [columns]="gridColumns"
+        [editing]="{ mode: 'cell', allowUpdating: false }"
+        [allowColumnResizing]="true"
+        [rowAlternationEnabled]="true"
+        [allowColumnReordering]="true"
+        columnResizingMode="widget"
+        class="grid-cell-underlined blur-effect"
+      >
+        
+      </dx-data-grid>
+    </ng-container>
+  
+    <ng-template #dataGridWithLoader>
+      <!-- Display the datagrid normally if paginatio required | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }-->
+      <dx-data-grid
+        id="gridContainer"
+        [dataSource]="dataSource "
+        [showBorders]="true"
+        [columns]="gridColumns"
+        [editing]="{ mode: 'cell', allowUpdating: false }"
+        [allowColumnResizing]="true"
+        [rowAlternationEnabled]="true"
+        [allowColumnReordering]="true"
+        columnResizingMode="widget"
+        class="grid-cell-underlined"
+      >
+        
+      </dx-data-grid>
+    </ng-template>
+  
+    
+    
+    <button mat-button class="close-button" (click)="closeDialog()">Close</button>
+  </div>
