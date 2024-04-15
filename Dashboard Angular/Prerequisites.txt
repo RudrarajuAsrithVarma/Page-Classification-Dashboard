@@ -1,16 +1,16 @@
-Page Classification Dashboard
+## Page Classification Dashboard
 
 First Download the zip folder named "DashBoard Angular.zip"
 Extract it to a specific directory.
 
-Versions:
+## Versions:
 1)Angular CLI Version: 16.1.4
 2)Node Version: 18.16.1
 3)Package Manager: npm 9.5.1
 4)OS: win32 x64
 5)typescript Version: 5.1.6
 
-PREREQUISITES:
+## PREREQUISITES:
 1) See that You have node.js installed on your device.
 2) Use this command only if angular is not installed in your device npm install -g @angular/cli.
 3) To create a new project use command- ng new "Project Name".
@@ -19,12 +19,12 @@ PREREQUISITES:
 6) Run the command npm install to install all the node_modules folder into your device.
 6) If any new packages are needed to be installed then install them accordingly.
 
-Steps to Run the Project:
+## Steps to Run the Project:
 1) Go to the Project folder.
 2) In the Command Prompt Enter the Command: ng serve
 3) Then open the port on the browser.
 4) Also make sure that the Backend is running Fine.
 
-To build the Project:
+## To build the Project:
 1) Run the command - ng build (or ng build --base-href "Your URL") Incase You Want a Specific Url.
 2) A "dist" Folder gets created.
